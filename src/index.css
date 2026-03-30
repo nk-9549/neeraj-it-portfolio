@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-headline: "Orbitron", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-technical: "Space Grotesk", sans-serif;
+
+  --color-surface: #0f0d16;
+  --color-surface-bright: #2d2a39;
+  --color-surface-container: #1b1823;
+  --color-surface-container-low: #14121c;
+  --color-surface-container-high: #211e2a;
+  --color-surface-container-highest: #272431;
+  --color-surface-container-lowest: #000000;
+  
+  --color-primary: #b6a0ff;
+  --color-primary-dim: #7e51ff;
+  --color-secondary: #00e3fd;
+  --color-secondary-dim: #00d4ec;
+  --color-tertiary: #ff51fa;
+  --color-tertiary-dim: #ff51fa;
+  
+  --color-on-surface: #f5eefc;
+  --color-on-surface-variant: #aea9b6;
+  
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-secondary/30;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface-container-high/40 backdrop-blur-xl border-t-2 border-primary/20;
+  }
+  
+  .hero-mesh {
+    background-image: radial-gradient(circle at 2px 2px, rgba(182, 160, 255, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+}
